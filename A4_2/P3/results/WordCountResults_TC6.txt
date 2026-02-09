@@ -1,0 +1,3 @@
+Row Labels	Count of TC6.txt
+(no words found)	0
+Time Elapsed (s):	0.000069

@@ -1,0 +1,3 @@
+ERROR: File not found: A4_2/P2/tests/TC5.txt
+ITEM	DEC	BIN	HEX
+Time Elapsed (s):	0.000072

@@ -1,0 +1,9 @@
+ERROR: Line 183: invalid number 'ABBA' (skipped)
+ERROR: Line 229: invalid number 'ERROR' (skipped)
+Count: 12767
+Mean: 247467395499714904064.000000
+Median: 246640973074290016256.000000
+Mode: N/A
+Standard Deviation (Population): 144605647009847033856.000000
+Variance (Population): 20910793147136483762414542324695312629760.000000
+Time Elapsed (s): 4.847674

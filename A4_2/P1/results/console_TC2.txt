@@ -1,0 +1,7 @@
+Count: 1977
+Mean: 250.784016
+Median: 247.000000
+Mode: 230.000000
+Standard Deviation (Population): 144.171319
+Variance (Population): 20785.369132
+Time Elapsed (s): 0.172526

@@ -1,0 +1,11 @@
+ERROR: Line 5: invalid number 'ABA' (skipped)
+ERROR: Line 155: invalid number '23,45' (skipped)
+ERROR: Line 232: invalid number '11;54' (skipped)
+ERROR: Line 239: invalid number 'll' (skipped)
+Count: 307
+Mean: 241.495114
+Median: 241.000000
+Mode: 11.000000
+Standard Deviation (Population): 145.464848
+Variance (Population): 21160.021963
+Time Elapsed (s): 0.002333

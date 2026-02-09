@@ -1,0 +1,42 @@
+La tarea 4.2 requiere algunas precisiones:
+
+1. Las medidas estadisticas que estamos usando son:
+Media, Moda, Mediana, Desv Estandar Poblacional, Varianza Poblacional
+
+2. Los resultados se adjuntan en el archivo P1 Results.xlxs
+
+3. Se solicita usar PEP8, sin embarggo, los nombres de archivos y folders solicitados puede que no cumplan con dicho estandar
+Pueden usar el que se solicita o ajustarlo para que cumpla PEP8. En cualquiera de los casos se considera correcto. Si desean configurar pylint con un archivo de configuración, adelante.
+
+4. Hay que generar un repositorio para todos los programas. Puedes organizarlos por carpetas y subcarpetas, siendo una llamada "results" o resultados para cada programa. En esa puedes guardar la evidencia de una corrida exitosa del programa
+Una propuesta seria
+Pruebas y Calidad
+    4.2
+         P1
+            source
+            tests
+            results
+         P2 
+            source
+            tests
+            results
+         P3
+            source
+            tests
+            results
+     5.2
+         P1
+            source
+            tests
+            results
+      6.2
+         P1
+            source
+            tests
+            results
+
+5. Se solicita un archivo PDF, pero no es necesario si adjunta en su repositorio en la carpeta de results, capturas de pantalla de los resultados exitosos de las corridas de sus programas
+
+6. Habia un typo en el TC1, una "s" en el ultimo dato. Subi los datos con el arreglo del dato y resultados del punto (2) . Se llama el archivo: A4.2 Archivos de Apoyo - 06-02-26
+
+Saludos

@@ -4,6 +4,6 @@ A4_2/P3/source/wordCount.py:34:0: C0116: Missing function or method docstring (m
 A4_2/P3/source/wordCount.py:81:0: C0116: Missing function or method docstring (missing-function-docstring)
 A4_2/P3/source/wordCount.py:87:0: C0116: Missing function or method docstring (missing-function-docstring)
 
------------------------------------
-Your code has been rated at 9.46/10
+------------------------------------------------------------------
+Your code has been rated at 9.46/10 (previous run: 9.46/10, +0.00)
 
