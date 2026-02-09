@@ -1,13 +1,16 @@
 #!/usr/bin/env python3
-"""
-convertNumbers.py
+"""Convert numbers to binary and hexadecimal.
 
 Reads a text file with integer values (one per line). Converts each integer to
 binary and hexadecimal using basic algorithms (no bin/hex/format).
 
 Outputs results to console and to ConvertionResults.txt, while logging invalid
 lines and continuing execution. Reports elapsed execution time at the end.
+
+Note:
+    The filename must remain 'convertNumbers.py' as required by Activity A4.2.
 """
+# pylint: disable=invalid-name
 
 from __future__ import annotations
 
@@ -15,12 +18,20 @@ import sys
 import time
 from typing import List, Tuple
 
-
 OUTPUT_FILENAME = "ConvertionResults.txt"
 HEX_SYMBOLS = "0123456789ABCDEF"
 
 
 def read_integer_values(file_path: str) -> Tuple[List[int], List[str]]:
+    """Read integers from a text file and keep running on invalid rows.
+
+    Args:
+        file_path (str): Path to the input file.
+
+    Returns:
+        Tuple[List[int], List[str]]: A tuple (integers, issues) where integers are
+        successfully parsed values and issues are warnings/errors to display.
+    """
     integers: List[int] = []
     issues: List[str] = []
 
@@ -34,7 +45,9 @@ def read_integer_values(file_path: str) -> Tuple[List[int], List[str]]:
                 try:
                     integers.append(int(clean_text))
                 except ValueError:
-                    issues.append(f"Line {row_index}: invalid integer '{clean_text}' (skipped)")
+                    issues.append(
+                        f"Line {row_index}: invalid integer '{clean_text}' (skipped)"
+                    )
     except FileNotFoundError:
         issues.append(f"File not found: {file_path}")
     except OSError as exc:
@@ -44,7 +57,18 @@ def read_integer_values(file_path: str) -> Tuple[List[int], List[str]]:
 
 
 def convert_to_base(value: int, base: int) -> str:
-    """Convert integer to base 2..16 using repeated division (basic algorithm)."""
+    """Convert an integer to base 2..16 using repeated division.
+
+    Args:
+        value (int): Integer to convert.
+        base (int): Target base (2 to 16).
+
+    Returns:
+        str: Converted value using digits 0-9 and A-F.
+
+    Raises:
+        ValueError: If base is not between 2 and 16.
+    """
     if base < 2 or base > 16:
         raise ValueError("Base must be between 2 and 16")
 
@@ -63,7 +87,6 @@ def convert_to_base(value: int, base: int) -> str:
         digits.append(HEX_SYMBOLS[remainder])
         magnitude //= base
 
-    # reverse digits manually
     converted = ""
     for i in range(len(digits) - 1, -1, -1):
         converted += digits[i]
@@ -72,12 +95,25 @@ def convert_to_base(value: int, base: int) -> str:
 
 
 def write_output_file(lines: List[str]) -> None:
+    """Write the output lines to the required results file.
+
+    Args:
+        lines (List[str]): Lines to write to the output file.
+    """
     with open(OUTPUT_FILENAME, "w", encoding="utf-8") as output_file:
         for line in lines:
             output_file.write(line + "\n")
 
 
 def main(argv: List[str]) -> int:
+    """Entry point for command-line execution.
+
+    Args:
+        argv (List[str]): Command-line arguments (expects input file path).
+
+    Returns:
+        int: Exit code (0 on success).
+    """
     if len(argv) != 2:
         print("Usage: python convertNumbers.py fileWithData.txt")
         return 2

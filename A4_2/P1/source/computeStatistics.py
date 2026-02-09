@@ -1,14 +1,10 @@
 #!/usr/bin/env python3
-"""
-computeStatistics.py
+"""Compute descriptive statistics from a file.
 
-Reads a text file with numeric values (one per line). Computes descriptive
-statistics using basic algorithms (no numpy/statistics): mean, median, mode,
-population variance and population standard deviation.
-
-Outputs results to console and to StatisticsResults.txt, and logs invalid
-lines while continuing execution. Reports elapsed execution time at the end.
+This module is part of Activity A4.2 and must keep the required filename
+'computeStatistics.py' as specified by the assignment.
 """
+# pylint: disable=invalid-name
 
 from __future__ import annotations
 
@@ -16,12 +12,16 @@ import sys
 import time
 from typing import List, Optional, Tuple
 
-
 OUTPUT_FILENAME = "StatisticsResults.txt"
 
 
 def read_numeric_values(file_path: str) -> Tuple[List[float], List[str]]:
-    """Return (values, issues) while keeping the program running on bad rows."""
+    """Read numbers from a text file and keep running on invalid rows.
+
+    Returns:
+        Tuple[List[float], List[str]]: A tuple (values, issues) where values are
+        successfully parsed numbers and issues are warnings/errors to display.
+    """
     numeric_values: List[float] = []
     issues: List[str] = []
 
@@ -47,7 +47,7 @@ def read_numeric_values(file_path: str) -> Tuple[List[float], List[str]]:
 
 
 def selection_sort(values: List[float]) -> List[float]:
-    """Basic sorting algorithm: selection sort (returns a sorted copy)."""
+    """Sort a list using selection sort and return a sorted copy."""
     sorted_copy = values[:]
     total_items = len(sorted_copy)
 
@@ -56,12 +56,16 @@ def selection_sort(values: List[float]) -> List[float]:
         for j in range(i + 1, total_items):
             if sorted_copy[j] < sorted_copy[smallest_pos]:
                 smallest_pos = j
-        sorted_copy[i], sorted_copy[smallest_pos] = sorted_copy[smallest_pos], sorted_copy[i]
+        sorted_copy[i], sorted_copy[smallest_pos] = (
+            sorted_copy[smallest_pos],
+            sorted_copy[i],
+        )
 
     return sorted_copy
 
 
 def compute_mean(values: List[float]) -> float:
+    """Compute the arithmetic mean using basic iteration."""
     total_sum = 0.0
     for val in values:
         total_sum += val
@@ -69,6 +73,7 @@ def compute_mean(values: List[float]) -> float:
 
 
 def compute_median(values: List[float]) -> float:
+    """Compute the median using a basic sorting algorithm."""
     sorted_values = selection_sort(values)
     count = len(sorted_values)
     middle = count // 2
@@ -79,10 +84,12 @@ def compute_median(values: List[float]) -> float:
 
 
 def compute_mode(values: List[float]) -> Optional[float]:
-    """
+    """Compute the mode using a frequency map.
+
     Returns:
-      - None if all values appear only once.
-      - If multiple modes, returns the smallest mode for determinism.
+        Optional[float]:
+            - None if all values appear only once.
+            - If multiple modes, returns the smallest mode for determinism.
     """
     frequency_map: dict[float, int] = {}
     for val in values:
@@ -104,6 +111,7 @@ def compute_mode(values: List[float]) -> Optional[float]:
 
 
 def compute_population_variance(values: List[float]) -> float:
+    """Compute population variance (divide by N), not sample variance."""
     mean_value = compute_mean(values)
     squared_sum = 0.0
 
@@ -115,10 +123,11 @@ def compute_population_variance(values: List[float]) -> float:
 
 
 def compute_population_stddev(values: List[float]) -> float:
+    """Compute population standard deviation."""
     return compute_population_variance(values) ** 0.5
 
 
-def build_output_text(
+def build_output_text(  # pylint: disable=too-many-arguments,too-many-positional-arguments
     item_count: int,
     mean_value: float,
     median_value: float,
@@ -127,6 +136,7 @@ def build_output_text(
     variance_value: float,
     elapsed_seconds: float,
 ) -> str:
+    """Build the exact text that will be printed and saved to the output file."""
     mode_text = "N/A" if mode_value is None else f"{mode_value:.6f}"
     return (
         f"Count: {item_count}\n"
@@ -140,11 +150,13 @@ def build_output_text(
 
 
 def write_output_file(text: str) -> None:
+    """Write the given text to the required output filename."""
     with open(OUTPUT_FILENAME, "w", encoding="utf-8") as output_file:
         output_file.write(text)
 
 
 def main(argv: List[str]) -> int:
+    """Entry point for command-line execution."""
     if len(argv) != 2:
         print("Usage: python computeStatistics.py fileWithData.txt")
         return 2

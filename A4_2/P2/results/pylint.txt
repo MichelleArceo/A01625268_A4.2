@@ -1,9 +1,4 @@
-************* Module convertNumbers
-A4_2/P2/source/convertNumbers.py:1:0: C0103: Module name "convertNumbers" doesn't conform to snake_case naming style (invalid-name)
-A4_2/P2/source/convertNumbers.py:23:0: C0116: Missing function or method docstring (missing-function-docstring)
-A4_2/P2/source/convertNumbers.py:74:0: C0116: Missing function or method docstring (missing-function-docstring)
-A4_2/P2/source/convertNumbers.py:80:0: C0116: Missing function or method docstring (missing-function-docstring)
 
-------------------------------------------------------------------
-Your code has been rated at 9.44/10 (previous run: 9.44/10, +0.00)
+--------------------------------------------------------------------
+Your code has been rated at 10.00/10 (previous run: 10.00/10, +0.00)
 
