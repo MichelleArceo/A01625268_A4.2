@@ -1,0 +1,15 @@
+************* Module computeStatistics
+A4_2/P1/source/computeStatistics.py:1:0: C0103: Module name "computeStatistics" doesn't conform to snake_case naming style (invalid-name)
+A4_2/P1/source/computeStatistics.py:64:0: C0116: Missing function or method docstring (missing-function-docstring)
+A4_2/P1/source/computeStatistics.py:71:0: C0116: Missing function or method docstring (missing-function-docstring)
+A4_2/P1/source/computeStatistics.py:106:0: C0116: Missing function or method docstring (missing-function-docstring)
+A4_2/P1/source/computeStatistics.py:117:0: C0116: Missing function or method docstring (missing-function-docstring)
+A4_2/P1/source/computeStatistics.py:121:0: C0116: Missing function or method docstring (missing-function-docstring)
+A4_2/P1/source/computeStatistics.py:121:0: R0913: Too many arguments (7/5) (too-many-arguments)
+A4_2/P1/source/computeStatistics.py:121:0: R0917: Too many positional arguments (7/5) (too-many-positional-arguments)
+A4_2/P1/source/computeStatistics.py:142:0: C0116: Missing function or method docstring (missing-function-docstring)
+A4_2/P1/source/computeStatistics.py:147:0: C0116: Missing function or method docstring (missing-function-docstring)
+
+-----------------------------------
+Your code has been rated at 9.03/10
+

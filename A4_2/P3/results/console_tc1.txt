@@ -1,0 +1,4 @@
+Row Labels	Count of tc1_words.txt
+mundo	3
+hola	2
+Time Elapsed (s):	0.000140

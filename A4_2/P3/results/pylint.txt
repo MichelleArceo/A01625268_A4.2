@@ -1,0 +1,9 @@
+************* Module wordCount
+A4_2/P3/source/wordCount.py:1:0: C0103: Module name "wordCount" doesn't conform to snake_case naming style (invalid-name)
+A4_2/P3/source/wordCount.py:34:0: C0116: Missing function or method docstring (missing-function-docstring)
+A4_2/P3/source/wordCount.py:81:0: C0116: Missing function or method docstring (missing-function-docstring)
+A4_2/P3/source/wordCount.py:87:0: C0116: Missing function or method docstring (missing-function-docstring)
+
+-----------------------------------
+Your code has been rated at 9.46/10
+
